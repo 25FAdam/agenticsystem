@@ -37,7 +37,10 @@ def setup_logging(level: str = "INFO", json_logs: bool = True) -> None:
         wrapper_class=structlog.make_filtering_bound_logger(
             getattr(logging, level.upper(), logging.INFO)
         ),
-        logger_factory=structlog.PrintLoggerFactory(sys.stderr),
+        # Resolve sys.stderr at logger-creation time (not configure time), so
+        # stream redirection in CLI test runners cannot leave the global
+        # config pointing at a closed stream.
+        logger_factory=lambda *args: structlog.PrintLogger(sys.stderr),
         cache_logger_on_first_use=False,
     )
 

@@ -219,6 +219,8 @@ __marimo__/
 
 # Email assistant runtime state (seed file stays in git)
 data/memory/memory.json
+data/actions.json
+data/calendar.json
 
 # Folders not to commit
 MD/

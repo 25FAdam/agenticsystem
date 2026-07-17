@@ -43,6 +43,14 @@ class Settings(BaseSettings):
         return self.data_dir / "memory" / "memory.seed.json"
 
     @property
+    def actions_path(self) -> Path:
+        return self.data_dir / "actions.json"
+
+    @property
+    def calendar_path(self) -> Path:
+        return self.data_dir / "calendar.json"
+
+    @property
     def effective_triage_model(self) -> str:
         return self.triage_model or self.model
 

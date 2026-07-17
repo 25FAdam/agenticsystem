@@ -19,6 +19,9 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=8.2"]
 
+[project.scripts]
+assistant = "email_assistant.cli:app"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
