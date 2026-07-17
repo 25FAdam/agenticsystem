@@ -225,3 +225,4 @@ data/runs/
 
 # Folders not to commit
 MD/
+.claude/

@@ -18,6 +18,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.2"]
+ui = ["streamlit>=1.36"]
 
 [project.scripts]
 assistant = "email_assistant.cli:app"

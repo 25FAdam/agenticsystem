@@ -44,7 +44,8 @@ copy .env.example .env          # then put your ANTHROPIC_API_KEY into .env
 **See it work without an API key** (scripted agent outputs, full flow):
 
 ```powershell
-.venv\Scripts\python.exe demo.py --offline
+.venv\Scripts\python.exe demo.py --offline               # terminal walkthrough
+.venv\Scripts\python.exe -m streamlit run app.py         # web UI (switch to Offline mode in the sidebar)
 ```
 
 **Live** (real Claude calls; one full inbox run costs roughly $0.20 with
@@ -63,6 +64,25 @@ copy .env.example .env          # then put your ANTHROPIC_API_KEY into .env
 Configuration lives in `.env` (see `.env.example`): model selection (default
 `claude-opus-4-8`; the triage classifier can be pointed at a cheaper model via
 `ASSISTANT_TRIAGE_MODEL`), user persona, data paths, log level.
+
+## Web UI
+
+`streamlit run app.py` starts a browser UI — a thin visual layer over the
+exact same components the CLI uses (orchestrator, queue, memory, providers;
+queue/memory/calendar state is shared with the CLI through `data/`):
+
+- **Inbox** — the mailbox with unread/archived state and a thread reader
+- **Run** — one-click inbox processing with triage decisions and metric cards
+- **Review** — pending actions as cards: approve & execute, edit the draft
+  body inline before sending, or reject with a note (stored as feedback
+  memory); decision history included
+- **Memory** — browse long-term records by kind, including learned feedback
+- **Telemetry** — metrics report, per-step spans (latency, token deltas), and
+  past run report artifacts
+
+The sidebar's **Offline (scripted)** mode replays the demo's canned agent
+outputs through the real orchestrator, so the whole UI works without an API
+key. **Reset workspace** restores the fixture state for a fresh walkthrough.
 
 ## Architecture
 
@@ -220,6 +240,7 @@ logic, and the observability — those are the substance of the exercise.
 
 ```
 ├── demo.py                      # scripted end-to-end demo (--offline supported)
+├── app.py                       # Streamlit web UI (offline mode supported)
 ├── data/
 │   ├── fixtures/inbox.json      # the mock inbox (9 realistic threads)
 │   └── memory/memory.seed.json  # seeded preferences / contacts / org facts
