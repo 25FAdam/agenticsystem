@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Email assistant runtime state (seed file stays in git)
+data/memory/memory.json
+
+# Folders not to commit
+MD/

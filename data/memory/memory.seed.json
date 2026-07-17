@@ -1,0 +1,68 @@
+{
+  "records": [
+    {
+      "id": "seed-001",
+      "kind": "preference",
+      "key": "reply_tone",
+      "value": "Prefers concise, friendly-professional replies. Sign-off: 'Best, Adam'. No corporate filler phrases.",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    },
+    {
+      "id": "seed-002",
+      "kind": "preference",
+      "key": "meeting_hours",
+      "value": "Prefers meetings between 13:00 and 17:00 CET; mornings are kept for focus work.",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    },
+    {
+      "id": "seed-003",
+      "kind": "contact",
+      "key": "dana.reyes@northwindlabs.com",
+      "value": "Dana Reyes — lead integration engineer at Northwind Labs (key client). Technical, appreciates precise numbers. Pricing questions should be routed to Priya Nair.",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    },
+    {
+      "id": "seed-004",
+      "kind": "contact",
+      "key": "marta.lindqvist@acme.io",
+      "value": "Marta Lindqvist — Head of Engineering, Adam's manager. Expects direct answers with explicit ETAs.",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    },
+    {
+      "id": "seed-005",
+      "kind": "contact",
+      "key": "sales@datacloud.example",
+      "value": "DataCloud — vendor for data warehouse licenses. Slow to respond; chase after 3 business days.",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    },
+    {
+      "id": "seed-006",
+      "kind": "org_fact",
+      "key": "api_rate_limits",
+      "value": "Acme Pro plan: 1000 requests/min per API key. Temporary burst raises are possible via support ticket; permanent raises and pricing are approved by Product (Priya Nair).",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    },
+    {
+      "id": "seed-007",
+      "kind": "org_fact",
+      "key": "vendor_invoices",
+      "value": "Vendor invoices are paid by finance@acme.io. Forward invoice reminders there with the PO number; do not confirm payment dates yourself.",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    },
+    {
+      "id": "seed-008",
+      "kind": "org_fact",
+      "key": "it_access_requests",
+      "value": "Snowflake access approvals currently take ~2 weeks; requests are filed via the IT portal.",
+      "source": "seed",
+      "updated_at": "2026-07-01T00:00:00+00:00"
+    }
+  ]
+}
