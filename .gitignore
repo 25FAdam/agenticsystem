@@ -221,6 +221,7 @@ __marimo__/
 data/memory/memory.json
 data/actions.json
 data/calendar.json
+data/runs/
 
 # Folders not to commit
 MD/

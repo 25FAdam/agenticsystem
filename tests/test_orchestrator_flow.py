@@ -113,6 +113,18 @@ def test_full_run(orchestrator, mail):
     # single-message thread skipped summarization
     assert orchestrator.state.contexts["t-001"].summary is None
 
+    # step tracing: every agent invocation became an AgentStep span
+    agents = [s.agent for s in orchestrator.steps]
+    assert agents.count("triage") == 8
+    assert agents.count("summarizer") == 1
+    assert agents.count("drafter") == 3
+    assert agents.count("scheduler") == 2
+    assert all(s.run_id == orchestrator.state.run_id for s in orchestrator.steps)
+    assert all(not s.error for s in orchestrator.steps)
+    drafter_steps = [s for s in orchestrator.steps if s.agent == "drafter"]
+    assert all("draft to" in s.output_summary for s in drafter_steps)
+    assert len(report["steps"]) == 14
+
 
 def test_second_run_is_idempotent(orchestrator, mail):
     orchestrator.run(now=NOW)
@@ -146,3 +158,23 @@ def test_thread_failure_does_not_abort_run(mail, seeded_store, tmp_path):
     assert report["counters"]["threads_processed"] == 2
     assert orchestrator.metrics.errors["thread_failed"] == 6
     assert report["pending_actions"] == 0
+
+    # failed invocations are captured as error steps:
+    # 6 LLM triages + 1 scheduler call from the awaiting-reply sweep
+    error_steps = [s for s in orchestrator.steps if s.error]
+    assert len(error_steps) == 7
+    assert all("LLMParseError" in s.error for s in error_steps)
+    assert orchestrator.metrics.errors["followup_failed"] == 1
+
+
+def test_write_report_creates_artifact(tmp_path):
+    from email_assistant.orchestrator import write_report
+
+    report = {"run_id": "run_test123", "counters": {"threads_processed": 2}}
+    path = write_report(report, tmp_path / "runs")
+
+    assert path.name == "run_test123.json"
+    import json
+
+    restored = json.loads(path.read_text(encoding="utf-8"))
+    assert restored["counters"]["threads_processed"] == 2

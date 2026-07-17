@@ -54,6 +54,12 @@ def bind_run(run_id: str) -> None:
     structlog.contextvars.bind_contextvars(run_id=run_id)
 
 
+def bound_span(span_id: str):
+    """Context manager: attach span_id to all log events inside a step, so
+    nested events (e.g. llm_call) can be correlated to the AgentStep."""
+    return structlog.contextvars.bound_contextvars(span_id=span_id)
+
+
 class MetricsRegistry:
     """Per-run counters, latency observations, token usage and errors."""
 

@@ -62,7 +62,7 @@ def run(
         raise typer.Exit(1)
 
     from .llm import ClaudeClient
-    from .orchestrator import Orchestrator
+    from .orchestrator import Orchestrator, write_report
 
     mail, _calendar, memory, queue = _build(settings)
     llm = ClaudeClient(settings=settings)
@@ -92,6 +92,9 @@ def run(
         "[cyan]assistant review[/cyan] to approve, edit or reject them.\n"
     )
     console.print(llm.metrics.render_report())
+
+    report_path = write_report(report, settings.runs_dir)
+    console.print(f"\nRun report saved to [cyan]{report_path}[/cyan]")
 
 
 # ---------------------------------------------------------------------------

@@ -51,6 +51,10 @@ class Settings(BaseSettings):
         return self.data_dir / "calendar.json"
 
     @property
+    def runs_dir(self) -> Path:
+        return self.data_dir / "runs"
+
+    @property
     def effective_triage_model(self) -> str:
         return self.triage_model or self.model
 
