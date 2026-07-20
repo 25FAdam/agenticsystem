@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INBOX = ROOT / "data" / "fixtures" / "inbox.json"
 SEED = ROOT / "data" / "memory" / "memory.seed.json"
 
-USER_EMAIL = "adam.farkas@acme.io"
+USER_EMAIL = "adam.foldvari@testmail.com"
 
 
 class FakeLLM:
@@ -51,7 +51,7 @@ class FakeLLM:
 
 @pytest.fixture
 def mail() -> MockMailProvider:
-    return MockMailProvider(INBOX, user_email=USER_EMAIL, user_name="Adam Farkas")
+    return MockMailProvider(INBOX, user_email=USER_EMAIL, user_name="Adam Foldvari")
 
 
 @pytest.fixture

@@ -164,7 +164,7 @@ def build_scripted_llm() -> ScriptedLLM:
                       "assembling the timeline immediately. I anticipate being able "
                       "to confirm my progress with you before lunch, as requested.\n\n"
                       "Please do not hesitate to reach out if there is anything "
-                      "further you need from me.\n\nKind regards,\nAdam Farkas"),
+                      "further you need from me.\n\nKind regards,\nAdam Foldvari"),
                 rationale="Manager escalation — formal acknowledgement.",
             ),
             ReplyDraft(

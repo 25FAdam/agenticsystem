@@ -24,8 +24,8 @@ class Settings(BaseSettings):
     # Optional override for the high-volume triage classifier (e.g. claude-haiku-4-5).
     triage_model: str = ""
 
-    user_name: str = "Adam Farkas"
-    user_email: str = "adam.farkas@acme.io"
+    user_name: str = "Adam Foldvari"
+    user_email: str = "adam.foldvari@testmail.com"
 
     data_dir: Path = Path("data")
     log_level: str = "INFO"
