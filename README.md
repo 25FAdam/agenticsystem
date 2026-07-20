@@ -84,6 +84,35 @@ The sidebar's **Offline (scripted)** mode replays the demo's canned agent
 outputs through the real orchestrator, so the whole UI works without an API
 key. **Reset workspace** restores the fixture state for a fresh walkthrough.
 
+<table>
+<tr><td width="50%">
+
+**Inbox** — mailbox table, thread reader
+<img src="docs/screenshots/ui-inbox.png" alt="Inbox tab">
+
+</td><td width="50%">
+
+**Run** — triage table + metric cards after processing
+<img src="docs/screenshots/ui-run.png" alt="Run tab">
+
+</td></tr>
+<tr><td width="50%">
+
+**Review** — pending action cards: edit inline, approve or reject with a note
+<img src="docs/screenshots/ui-review.png" alt="Review tab">
+
+</td><td width="50%">
+
+**Memory** — long-term records (preferences, contacts, org facts, feedback)
+<img src="docs/screenshots/ui-memory.png" alt="Memory tab">
+
+</td></tr>
+</table>
+
+**Telemetry** — metrics report, per-step spans (latency, token deltas), past run reports
+<img src="docs/screenshots/ui-telemetry.png" alt="Telemetry tab">
+
+
 ## Architecture
 
 ```mermaid
