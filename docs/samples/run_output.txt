@@ -1,0 +1,46 @@
+                         Triage — run run_3104df5d8c41                         
+┌────────┬────────────┬──────────┬─────────────┬──────────────────────────────┐
+│ thread │ intent     │ priority │ route       │ labels                       │
+├────────┼────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ t-002  │ request    │ high     │ needs_reply │ client, api, rate-limits     │
+│ t-001  │ request    │ urgent   │ needs_reply │ postmortem, incident,        │
+│        │            │          │             │ deadline                     │
+│ t-004  │ newsletter │ low      │ archive     │ newsletter                   │
+│ t-006  │ spam       │ low      │ archive     │ spam                         │
+│ t-009  │ request    │ high     │ needs_reply │ onboarding, hr,              │
+│        │            │          │             │ access-request               │
+│ t-003  │ meeting    │ normal   │ needs_reply │ scheduling, roadmap, q3      │
+│ t-007  │ fyi        │ normal   │ no_action   │ facilities, office-closure,  │
+│        │            │          │             │ announcement                 │
+│ t-008  │ billing    │ high     │ needs_reply │ invoice, overdue, vendor     │
+└────────┴────────────┴──────────┴─────────────┴──────────────────────────────┘
+
+6 action(s) awaiting review — run assistant review to approve, edit or reject 
+them.
+
+=== Run metrics ===
+-- counters --
+  drafter_calls: 5
+  followups_proposed: 1
+  replies_drafted: 5
+  scheduler_calls: 1
+  summarizer_calls: 2
+  threads_archived: 2
+  threads_no_action: 1
+  threads_processed: 8
+  triage_calls: 6
+-- latencies --
+  drafter_latency: n=5 avg=6032.4ms max=7411.7ms
+  scheduler_latency: n=1 avg=2680.6ms max=2680.6ms
+  summarizer_latency: n=2 avg=5931.8ms max=5998.7ms
+  triage_latency: n=6 avg=3041.0ms max=4158.5ms
+-- tokens --
+  input_tokens: 19188
+  output_tokens: 3226
+-- errors --
+  none
+
+Run report saved to 
+C:\Users\25fad\AppData\Local\Temp\claude\C--Users-25fad-Documents-Projects-Bets
+son-agenticsystem\85a83c15-59e1-41e9-bd06-d5003a85ef98\scratchpad\sampledata\ru
+ns\run_3104df5d8c41.json

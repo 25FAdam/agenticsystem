@@ -1,0 +1,266 @@
+{
+  "run_id": "run_3104df5d8c41",
+  "unread_processed": 8,
+  "pending_actions": 6,
+  "counters": {
+    "triage_calls": 6,
+    "threads_processed": 8,
+    "summarizer_calls": 2,
+    "drafter_calls": 5,
+    "replies_drafted": 5,
+    "threads_archived": 2,
+    "threads_no_action": 1,
+    "scheduler_calls": 1,
+    "followups_proposed": 1
+  },
+  "metrics": {
+    "counters": {
+      "triage_calls": 6,
+      "threads_processed": 8,
+      "summarizer_calls": 2,
+      "drafter_calls": 5,
+      "replies_drafted": 5,
+      "threads_archived": 2,
+      "threads_no_action": 1,
+      "scheduler_calls": 1,
+      "followups_proposed": 1
+    },
+    "latencies": {
+      "triage_latency": {
+        "count": 6,
+        "avg_ms": 3041.0,
+        "max_ms": 4158.5
+      },
+      "summarizer_latency": {
+        "count": 2,
+        "avg_ms": 5931.8,
+        "max_ms": 5998.7
+      },
+      "drafter_latency": {
+        "count": 5,
+        "avg_ms": 6032.4,
+        "max_ms": 7411.7
+      },
+      "scheduler_latency": {
+        "count": 1,
+        "avg_ms": 2680.6,
+        "max_ms": 2680.6
+      }
+    },
+    "tokens": {
+      "input_tokens": 19188,
+      "output_tokens": 3226
+    },
+    "errors": {}
+  },
+  "steps": [
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "e33e4dd484044537aeb6333d4974030d",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-002",
+      "output_summary": "request/high -> needs_reply",
+      "latency_ms": 2971.7,
+      "input_tokens": 1614,
+      "output_tokens": 93,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:35.517837Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "beb7c1f8644841b790bf77ae25c87c00",
+      "agent": "summarizer",
+      "tool": "llm",
+      "input_summary": "thread t-002",
+      "output_summary": "4 key points, 3 action items",
+      "latency_ms": 5999.4,
+      "input_tokens": 1071,
+      "output_tokens": 392,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:38.495194Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "143b201c8d5b404fb9eef8e308330b24",
+      "agent": "drafter",
+      "tool": "llm+memory",
+      "input_summary": "thread t-002",
+      "output_summary": "draft to dana.reyes@northwindlabs.com (586 chars)",
+      "latency_ms": 7412.8,
+      "input_tokens": 1773,
+      "output_tokens": 459,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:44.486172Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "83e1a0af30dd464e9f1f786047126f7d",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-001",
+      "output_summary": "request/urgent -> needs_reply",
+      "latency_ms": 2479.0,
+      "input_tokens": 1328,
+      "output_tokens": 103,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:51.908711Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "e018bbfaac60450f90f2ea8a32b55b8d",
+      "agent": "drafter",
+      "tool": "llm+memory",
+      "input_summary": "thread t-001",
+      "output_summary": "draft to marta.lindqvist@acme.io (244 chars)",
+      "latency_ms": 5465.4,
+      "input_tokens": 1195,
+      "output_tokens": 297,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:54.385740Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "b3278cfa581241fc8db579b15330b717",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-004",
+      "output_summary": "newsletter/low -> archive",
+      "latency_ms": 0.2,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:59.854576Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "df02885a101d43a688f1a8461ec1cc93",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-006",
+      "output_summary": "spam/low -> archive",
+      "latency_ms": 0.1,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:59.857648Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "d362256e83e047f6b5fddf1830e62639",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-009",
+      "output_summary": "request/high -> needs_reply",
+      "latency_ms": 4159.2,
+      "input_tokens": 1728,
+      "output_tokens": 108,
+      "error": "",
+      "timestamp": "2026-07-17T19:30:59.857648Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "42ee96e414f547c79e5791a00a632839",
+      "agent": "summarizer",
+      "tool": "llm",
+      "input_summary": "thread t-009",
+      "output_summary": "6 key points, 4 action items",
+      "latency_ms": 5865.6,
+      "input_tokens": 1189,
+      "output_tokens": 446,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:04.017387Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "de951d97a5f344e98bad05d289614218",
+      "agent": "drafter",
+      "tool": "llm+memory",
+      "input_summary": "thread t-009",
+      "output_summary": "draft to sofia.brandt@acme.io (328 chars)",
+      "latency_ms": 6009.0,
+      "input_tokens": 1962,
+      "output_tokens": 383,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:09.882605Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "333c70bfcfd8436ca78e8ddab972075c",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-003",
+      "output_summary": "meeting/normal -> needs_reply",
+      "latency_ms": 3489.1,
+      "input_tokens": 1354,
+      "output_tokens": 109,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:15.894130Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "1d93eb510a47419f80358e41476eb8b2",
+      "agent": "drafter",
+      "tool": "llm+memory",
+      "input_summary": "thread t-003",
+      "output_summary": "draft to priya.nair@acme.io (173 chars)",
+      "latency_ms": 4704.7,
+      "input_tokens": 1225,
+      "output_tokens": 254,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:19.383816Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "00248941e4ed42c7add8084e3b5b37b1",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-007",
+      "output_summary": "fyi/normal -> no_action",
+      "latency_ms": 2362.1,
+      "input_tokens": 1320,
+      "output_tokens": 90,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:24.090185Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "94f4c00fe87145bb9920a4c07412e72e",
+      "agent": "triage",
+      "tool": "classifier",
+      "input_summary": "thread t-008",
+      "output_summary": "billing/high -> needs_reply",
+      "latency_ms": 2790.0,
+      "input_tokens": 1327,
+      "output_tokens": 100,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:26.451945Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "960bf8ed3faa429fb164f7f910dd2b19",
+      "agent": "drafter",
+      "tool": "llm+memory",
+      "input_summary": "thread t-008",
+      "output_summary": "draft to billing@datacloud.example (220 chars)",
+      "latency_ms": 6574.8,
+      "input_tokens": 1184,
+      "output_tokens": 327,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:29.235881Z"
+    },
+    {
+      "run_id": "run_3104df5d8c41",
+      "step_id": "f411b04ab1524724846404d963113362",
+      "agent": "scheduler",
+      "tool": "llm",
+      "input_summary": "thread t-005",
+      "output_summary": "reminder due 2026-07-20 09:00",
+      "latency_ms": 2681.3,
+      "input_tokens": 918,
+      "output_tokens": 65,
+      "error": "",
+      "timestamp": "2026-07-17T19:31:35.821482Z"
+    }
+  ]
+}

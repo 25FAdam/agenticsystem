@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "email-assistant"
+version = "0.1.0"
+description = "Agentic email assistant prototype (orchestrator + worker agents) — AI Engineer take-home assessment"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.100",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "structlog>=24.1",
+    "typer>=0.12",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2"]
+ui = ["streamlit>=1.36"]
+
+[project.scripts]
+assistant = "email_assistant.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

@@ -1,0 +1,214 @@
+{
+  "threads": [
+    {
+      "id": "t-001",
+      "subject": "URGENT: Postmortem for yesterday's checkout outage",
+      "participants": ["marta.lindqvist@acme.io", "adam.foldvari@testmail.com"],
+      "unread": true,
+      "labels": [],
+      "messages": [
+        {
+          "id": "m-001-1",
+          "thread_id": "t-001",
+          "sender": "marta.lindqvist@acme.io",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-17T07:42:00+00:00",
+          "subject": "URGENT: Postmortem for yesterday's checkout outage",
+          "body": "Adam,\n\nWe need the incident postmortem for yesterday's checkout outage on exec desks by EOD today. Can you own the timeline section and confirm by lunch that you're on it?\n\nMarta"
+        }
+      ]
+    },
+    {
+      "id": "t-002",
+      "subject": "Question about API rate limits",
+      "participants": ["dana.reyes@northwindlabs.com", "adam.foldvari@testmail.com"],
+      "unread": true,
+      "labels": ["client"],
+      "messages": [
+        {
+          "id": "m-002-1",
+          "thread_id": "t-002",
+          "sender": "dana.reyes@northwindlabs.com",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-15T10:05:00+00:00",
+          "subject": "Question about API rate limits",
+          "body": "Hi Adam,\n\nWe keep hitting 429s around 14:00 CET when our nightly sync job runs during the day catch-up. Is the Pro plan limit 600 or 1000 requests/min? And is it enforced per API key or per organization?\n\nThanks,\nDana"
+        },
+        {
+          "id": "m-002-2",
+          "thread_id": "t-002",
+          "sender": "adam.foldvari@testmail.com",
+          "to": ["dana.reyes@northwindlabs.com"],
+          "date": "2026-07-15T13:40:00+00:00",
+          "subject": "Re: Question about API rate limits",
+          "body": "Hi Dana,\n\nPro is 1000 requests/min, enforced per API key. The 429s at 14:00 suggest your sync bursts above that for a few minutes. Happy to look at the traffic on your key if you send me the key ID.\n\nBest, Adam"
+        },
+        {
+          "id": "m-002-3",
+          "thread_id": "t-002",
+          "sender": "dana.reyes@northwindlabs.com",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-17T08:55:00+00:00",
+          "subject": "Re: Question about API rate limits",
+          "body": "Thanks Adam! Key ID is NWL-PROD-07.\n\nAlso — can burst limits be raised temporarily for our quarter-end backfill next week? And who should I talk to about pricing for a permanent raise?\n\nDana"
+        }
+      ]
+    },
+    {
+      "id": "t-003",
+      "subject": "Q3 roadmap sync — Thursday 14:00?",
+      "participants": ["priya.nair@acme.io", "adam.foldvari@testmail.com"],
+      "unread": true,
+      "labels": [],
+      "messages": [
+        {
+          "id": "m-003-1",
+          "thread_id": "t-003",
+          "sender": "priya.nair@acme.io",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-16T16:20:00+00:00",
+          "subject": "Q3 roadmap sync — Thursday 14:00?",
+          "body": "Hi Adam,\n\nCould we grab 45 minutes on Thursday at 14:00 for the Q3 roadmap sync? Agenda: rate-limit tier revamp, EU data residency, and the two open hires.\n\nIf Thursday doesn't work, propose another slot this week.\n\nPriya"
+        }
+      ]
+    },
+    {
+      "id": "t-004",
+      "subject": "API Weekly #204: Rate limiting patterns that scale",
+      "participants": ["digest@apiweekly.dev", "adam.foldvari@testmail.com"],
+      "unread": true,
+      "labels": [],
+      "messages": [
+        {
+          "id": "m-004-1",
+          "thread_id": "t-004",
+          "sender": "digest@apiweekly.dev",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-17T05:00:00+00:00",
+          "subject": "API Weekly #204: Rate limiting patterns that scale",
+          "body": "This week: token bucket vs sliding window in production, OAuth device-flow pitfalls, and why your 429 responses need Retry-After headers.\n\nRead online | Unsubscribe"
+        }
+      ]
+    },
+    {
+      "id": "t-005",
+      "subject": "Quote for annual DataCloud license renewal",
+      "participants": ["adam.foldvari@testmail.com", "sales@datacloud.example"],
+      "unread": false,
+      "labels": ["vendor"],
+      "messages": [
+        {
+          "id": "m-005-1",
+          "thread_id": "t-005",
+          "sender": "adam.foldvari@testmail.com",
+          "to": ["sales@datacloud.example"],
+          "date": "2026-07-10T09:30:00+00:00",
+          "subject": "Quote for annual DataCloud license renewal",
+          "body": "Hi,\n\nCould you send an updated quote for the annual DataCloud license renewal (50 seats)? Our finance team needs it before July 25 to process the PO in time.\n\nBest, Adam"
+        }
+      ]
+    },
+    {
+      "id": "t-006",
+      "subject": "You have been selected for exclusive BTC rewards!!!",
+      "participants": ["rewards@crypto-winners.biz", "adam.foldvari@testmail.com"],
+      "unread": true,
+      "labels": [],
+      "messages": [
+        {
+          "id": "m-006-1",
+          "thread_id": "t-006",
+          "sender": "rewards@crypto-winners.biz",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-16T22:11:00+00:00",
+          "subject": "You have been selected for exclusive BTC rewards!!!",
+          "body": "Congratulations! Your address has been selected for exclusive Bitcoin rewards worth $4,000. Claim within 24 hours by verifying your wallet at the link below.\n\nhttp://crypto-winners.biz/claim?id=88231"
+        }
+      ]
+    },
+    {
+      "id": "t-007",
+      "subject": "Office closed Friday July 24 — electrical maintenance",
+      "participants": ["facilities@acme.io", "adam.foldvari@testmail.com"],
+      "unread": true,
+      "labels": [],
+      "messages": [
+        {
+          "id": "m-007-1",
+          "thread_id": "t-007",
+          "sender": "facilities@acme.io",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-16T12:00:00+00:00",
+          "subject": "Office closed Friday July 24 — electrical maintenance",
+          "body": "All,\n\nThe office will be closed this Friday (July 24) for planned electrical maintenance. Badge access will be disabled between 06:00 and 18:00. Please plan to work remotely.\n\nFacilities Team"
+        }
+      ]
+    },
+    {
+      "id": "t-008",
+      "subject": "Invoice #2219 — 11 days overdue",
+      "participants": ["billing@datacloud.example", "adam.foldvari@testmail.com"],
+      "unread": true,
+      "labels": ["vendor"],
+      "messages": [
+        {
+          "id": "m-008-1",
+          "thread_id": "t-008",
+          "sender": "billing@datacloud.example",
+          "to": ["adam.foldvari@testmail.com"],
+          "date": "2026-07-16T09:15:00+00:00",
+          "subject": "Invoice #2219 — 11 days overdue",
+          "body": "Dear Adam,\n\nOur records show invoice #2219 ($4,800, Q2 usage, due July 5) as unpaid. Could you confirm the payment status or an expected payment date?\n\nRegards,\nDataCloud Billing"
+        }
+      ]
+    },
+    {
+      "id": "t-009",
+      "subject": "Onboarding plan — Elena Sousa (Data Engineer, starts Aug 3)",
+      "participants": ["sofia.brandt@acme.io", "adam.foldvari@testmail.com", "jonas.weber@acme.io"],
+      "unread": true,
+      "labels": ["internal"],
+      "messages": [
+        {
+          "id": "m-009-1",
+          "thread_id": "t-009",
+          "sender": "sofia.brandt@acme.io",
+          "to": ["adam.foldvari@testmail.com"],
+          "cc": ["jonas.weber@acme.io"],
+          "date": "2026-07-14T09:00:00+00:00",
+          "subject": "Onboarding plan — Elena Sousa (Data Engineer, starts Aug 3)",
+          "body": "Hi Adam,\n\nGood news — Elena Sousa signed! She starts August 3 as Data Engineer on your team. From you I need by July 22: equipment list, access requests, and a week-1 buddy.\n\nSofia (HR)"
+        },
+        {
+          "id": "m-009-2",
+          "thread_id": "t-009",
+          "sender": "adam.foldvari@testmail.com",
+          "to": ["sofia.brandt@acme.io"],
+          "cc": ["jonas.weber@acme.io"],
+          "date": "2026-07-14T15:30:00+00:00",
+          "subject": "Re: Onboarding plan — Elena Sousa (Data Engineer, starts Aug 3)",
+          "body": "Great news!\n\nEquipment: standard dev laptop + 2 monitors. Access: GitHub, Snowflake read, Airflow staging. Buddy: I'm thinking Jonas — Jonas, would you take week 1?\n\nBest, Adam"
+        },
+        {
+          "id": "m-009-3",
+          "thread_id": "t-009",
+          "sender": "jonas.weber@acme.io",
+          "to": ["adam.foldvari@testmail.com", "sofia.brandt@acme.io"],
+          "date": "2026-07-15T11:10:00+00:00",
+          "subject": "Re: Onboarding plan — Elena Sousa (Data Engineer, starts Aug 3)",
+          "body": "Happy to buddy Elena for week 1.\n\nOne flag: Snowflake read approvals take about 2 weeks at the moment — the request should be filed this week to make Aug 3.\n\nJonas"
+        },
+        {
+          "id": "m-009-4",
+          "thread_id": "t-009",
+          "sender": "sofia.brandt@acme.io",
+          "to": ["adam.foldvari@testmail.com"],
+          "cc": ["jonas.weber@acme.io"],
+          "date": "2026-07-16T17:45:00+00:00",
+          "subject": "Re: Onboarding plan — Elena Sousa (Data Engineer, starts Aug 3)",
+          "body": "Thanks both. Still missing: desk allocation and a security training slot.\n\nAdam, can you confirm those two and file the Snowflake request by Friday?\n\nSofia"
+        }
+      ]
+    }
+  ]
+}
